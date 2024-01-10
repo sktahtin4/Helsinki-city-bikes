@@ -15,6 +15,8 @@ Helsinki city bikes journey data is available from 2016 to 2021 and the data is 
 
 The info on the city bike stations can be downloaded from https://public-transport-hslhrt.opendata.arcgis.com/datasets/HSLHRT::helsingin-ja-espoon-kaupunkipyöräasemat-avoin/about.
 
+The data is stored under separate directory `bike_data`.
+
 
 ### Data cleaning
 The data columns are mixture of Finnish, Swedish and English so we translate all the relevant data to English.
@@ -30,3 +32,14 @@ In this project we have the following relevant notebooks:
 1. `City-bikes-data-cleaning.ipynb`: cleaning and merging the data and saving it to one csv file.
 2. `City-bikes-data-analysis.ipynb`: data analysis of the Helsinki city bike data.
 3. `City-bikes-data-analysis-with-folium-maps.ipynb`: using folium package to plot interactive maps (time consuming and stiff method to analyse the data.)
+
+### Virtual environment
+Create virtual environment:
+`python3 -m venv city-bike-env`
+
+Activate virtual environment:
+`source city-bike-env/bin/activate`
+
+Install required packages:
+`pip install -r requirements.txt`
+
