@@ -34,12 +34,12 @@ In this project we have the following relevant notebooks:
 3. `City-bikes-data-analysis-with-folium-maps.ipynb`: using folium package to plot interactive maps (time consuming and stiff method to analyse the data.)
 
 ### Virtual environment
-Create virtual environment:
+Create virtual environment:\
 `python3 -m venv city-bike-env`
 
-Activate virtual environment:
+Activate virtual environment:\
 `source city-bike-env/bin/activate`
 
-Install required packages:
+Install required packages:\
 `pip install -r requirements.txt`
 
