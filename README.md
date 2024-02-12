@@ -43,3 +43,55 @@ Activate virtual environment:\
 Install required packages:\
 `pip install -r requirements.txt`
 
+
+## Basic H3 functions
+Many of the function names were changed in version 4.X of H3 library. The comparison of function names between version 3.X and 4.X can be found from: https://h3geo.org/docs/library/migration-3.x/functions.
+
+### Hexagon index
+With given coordinates (latitude and longitude) and with selected resolution, we get the hexagon id:
+```
+# Version 3.X:
+hexagon_index = h3.geo_to_h3(lat, lng, resolution)
+
+# Version 4.X:
+hexagon_index = h3.latlng_to_cell(lat, lng, resolution)
+```
+### Hexagon boundaries
+For plotting certain hexagons, we need to find the hexagon boundaries using the hexagon index:
+**Note**: in some systems coordinates are given as (lng, lat) and in another system (lat, lng). With `geo_json=True/False` these coordinates can be swapped.
+
+```
+# Version 3.X:
+boundary = h3.h3_to_geo_boundary(hexagon_index, geo_json=False)
+
+# Version 4.X:
+boundary = h3.cell_to_boundary(hexagon_index, geo_json=False)
+```
+Then using the library `shapely` we can plot the hexagon:
+```
+polygon = Polygon(boundary)
+plot_polygon(polygon)
+```
+
+
+### Neighbouring hexagons
+Sometimes we need to find the neighbours of certain hexagon. K=0 returns the origin index, k=1 returns the origin index and all neighboring indices, and so on.
+
+```
+# Version 3.X:
+kring = h3.k_ring(hexagon_index, k)
+
+# Version 4.X:
+kring = h3.grid_disk(hexagon_index, k)
+```
+
+Also we can calculate the grid distance between two cells:
+
+```
+# Version 3.X:
+kring = h3.h3_distance(hexagon_index_a, hexagon_index_a)
+
+# Version 4.X:
+kring = h3.grid_distance(hexagon_index_a, hexagon_index_a)
+```
+
