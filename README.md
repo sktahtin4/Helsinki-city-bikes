@@ -60,9 +60,11 @@ kring = h3.grid_distance(hexagon_index_a, hexagon_index_a)
 
 
 ## About the data
-Helsinki city bikes journey data is available from 2016 to 2021 and the data is owned by City Bike Finland. One full season of data can be downloaded from `dev.hsl.fi/citybikes/od-trips-[year]/od-trips-[year].zip` by selecting the desired year, so for example http://dev.hsl.fi/citybikes/od-trips-2021/od-trips-2021.zip.
+The Helsinki city bike data can be found from HSL open data webpage: https://www.hsl.fi/en/hsl/open-data. 
 
-The info on the city bike stations can be downloaded from https://public-transport-hslhrt.opendata.arcgis.com/datasets/HSLHRT::helsingin-ja-espoon-kaupunkipyöräasemat-avoin/about.
+Helsinki city bikes journey data is available from 2016 to 2021 and the data is owned by City Bike Finland. One full season of data can be downloaded from `dev.hsl.fi/citybikes/od-trips-[year]/od-trips-[year].zip` by selecting the desired year, so for example http://dev.hsl.fi/citybikes/od-trips-2021/od-trips-2021.zip. 
+
+The info on the city bike stations (©HSL 2021) can be downloaded from https://public-transport-hslhrt.opendata.arcgis.com/datasets/HSLHRT::helsingin-ja-espoon-kaupunkipyöräasemat-avoin/about.
 
 The data is stored under a separate directory `bike_data`.
 
